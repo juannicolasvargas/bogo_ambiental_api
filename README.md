@@ -1,25 +1,16 @@
-# README
+# Bogo Ambiental API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Api for wetlands of Bogota
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
-  2.5.1
+Just run the setup script to configure the app:
 
-* System dependencies
+```bash
+  bin/setup
+```
 
-* Configuration
+## Environment dependencies
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby 2.5.1
+* PostgreSQL
