@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: bogo_ambiental_api_production
-  username: bogo_ambiental_api
-  password: <%= ENV['BOGO_AMBIENTAL_API_DATABASE_PASSWORD'] %>
