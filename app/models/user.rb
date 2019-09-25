@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
   include DeviseTokenAuth::Concerns::User
+  mount_uploader :avatar_image, AvatarImageUploader
 
   validates_presence_of :name, :last_name, :email
 end

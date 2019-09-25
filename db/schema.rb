@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_12_004403) do
+ActiveRecord::Schema.define(version: 2019_09_25_190638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_09_12_004403) do
     t.string "email"
     t.string "name"
     t.string "last_name"
-    t.string "image"
+    t.string "avatar_image"
     t.string "address"
     t.integer "cell_number"
     t.string "encrypted_password", default: "", null: false
