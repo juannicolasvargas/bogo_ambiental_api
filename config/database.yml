@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: <%= ENV["POSTGRESQL_DATABASE"] || 'bogo_ambiental_api' %>
+  database: bogo_ambiental_api
   pool: <%= ENV["POSTGRESQL_POOL"] || 5 %>
   port: <%= ENV["POSTGRESQL_PORT"] || 5432 %>
 
