@@ -3,6 +3,10 @@ module Api
     module Auth
       class RegistrationsController < DeviseTokenAuth::RegistrationsController
 
+        def render_create_success
+          render json: current_user
+        end
+
         private
 
         def sign_up_params
