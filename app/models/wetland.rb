@@ -1,0 +1,2 @@
+class Wetland < ApplicationRecord
+end
