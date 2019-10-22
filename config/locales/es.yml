@@ -1,4 +1,11 @@
 es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              taken: "Ya existe una cuenta con este correo electrónico"
   devise_token_auth:
     sessions:
       not_confirmed: "Un correo electrónico de confirmación de su cuenta ha sido enviado a '%{email}'. Por favor, siga las instrucciones para validar su cuenta"
