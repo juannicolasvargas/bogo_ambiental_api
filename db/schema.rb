@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_10_22_212246) do
 
   create_table "wetlands", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.string "image"
     t.float "latitude"
     t.float "longitude"

@@ -2,7 +2,7 @@ module Api
   module V1
     class WetlandsController < ApplicationController
       before_action :set_wetland, only: [:show, :update, :destroy]
-      before_action :authenticate_user!
+      before_action :authenticate_user!, only: %i[index show destroy]
 
       # GET /wetlands
       def index
@@ -19,9 +19,8 @@ module Api
       # POST /wetlands
       def create
         @wetland = Wetland.new(wetland_params)
-
         if @wetland.save
-          render json: @wetland, status: :created, location: @wetland
+          render json: @wetland, status: :created
         else
           render json: @wetland.errors, status: :unprocessable_entity
         end
@@ -49,7 +48,7 @@ module Api
 
         # Only allow a trusted parameter "white list" through.
         def wetland_params
-          params.require(:wetland).permit(:name, :description, :image, :latitude, :longitude)
+          params.permit(:name, :description, :image, :latitude, :longitude)
         end
     end
   end

@@ -2,6 +2,14 @@ es:
   activerecord:
     errors:
       models:
+        wetland:
+          attributes:
+            latitude:
+              taken: "Ya existe un humedal con la misma latitud"
+            longitude:
+              taken: "Ya existe un humedal con la misma longitud"
+            name:
+              taken: "Ya existe un humedal con este nombre"
         user:
           attributes:
             email:
@@ -38,6 +46,8 @@ es:
       validate_account_update_params: "Los datos introducidos en la solicitud de actualización no son válidos."
       not_email: "no es un correo electrónico"
   devise:
+    failure:
+      unauthenticated: "no se encuentra authenticado para realizar estas consultas, por favor inicie sesión"
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación"
