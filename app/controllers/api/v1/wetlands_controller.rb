@@ -48,7 +48,7 @@ module Api
 
         # Only allow a trusted parameter "white list" through.
         def wetland_params
-          params.permit(:name, :description, :image, :latitude, :longitude)
+          params.permit(:name, :description, :image, :latitude, :longitude, :location, :extension)
         end
     end
   end
