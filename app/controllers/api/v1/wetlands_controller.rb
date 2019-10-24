@@ -2,7 +2,7 @@ module Api
   module V1
     class WetlandsController < ApplicationController
       before_action :set_wetland, only: [:show, :update, :destroy]
-      before_action :authenticate_user!, only: %i[index show destroy]
+      before_action :authenticate_user!, only: %i[index show]
 
       # GET /wetlands
       def index
