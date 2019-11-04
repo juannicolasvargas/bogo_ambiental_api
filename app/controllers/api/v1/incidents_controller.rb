@@ -6,7 +6,7 @@ module Api
 
       # GET /incidents
       def index
-        incidents = Incident.all
+        incidents = Incident.all.paginate(page: params[:page], per_page: 6)
         render json: incidents
       end
 
@@ -49,7 +49,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def incident_params
-        params.permit(:title, :description, :image)
+        params.permit(:title, :description, :image, :page)
       end
     end
   end

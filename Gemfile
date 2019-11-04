@@ -14,6 +14,8 @@ gem 'puma', '~> 3.11'
 gem 'devise_token_auth'
 gem 'omniauth'
 
+gem 'will_paginate'
+
 # Serializers
 gem 'active_model_serializers', '~> 0.10.6'
 # Reduces boot times through caching; required in config/boot.rb
