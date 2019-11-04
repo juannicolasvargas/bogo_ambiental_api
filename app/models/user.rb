@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   mount_uploader :avatar_image, AvatarImageUploader
 
   validates_presence_of :name, :last_name, :email
+
+  has_many :incidents
 end

@@ -2,6 +2,10 @@ es:
   activerecord:
     errors:
       models:
+        incident:
+          attributes:
+            title:
+              taken: "Ya existe una incidencia con ese titulo"
         wetland:
           attributes:
             latitude:
