@@ -6,7 +6,7 @@ module Api
 
       # GET /incidents
       def index
-        incidents = Incident.all.paginate(page: params[:page], per_page: 6)
+        incidents = Incident.all.paginate(page: params[:page], per_page: 6).order_by_created_at
         render json: incidents
       end
 

@@ -2,10 +2,10 @@ module Api
   module V1
     class MyIncidentsController < ApplicationController
       before_action :authenticate_user!
-      
+
       # GET /my_incidents
       def index
-        incidents = current_user.incidents.paginate(page: params[:page], per_page: 6)
+        incidents = current_user.incidents.paginate(page: params[:page], per_page: 6).order_by_created_at
         render json: incidents
       end
 
