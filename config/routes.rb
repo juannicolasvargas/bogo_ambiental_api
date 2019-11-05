@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         registrations: 'api/v1/auth/registrations',
         sessions: 'api/v1/auth/sessions'
       }
+      resources :my_incidents, only: %i[index show]
       resources :wetlands
       resources :incidents
       resources :avatar_images, only: [:create]
